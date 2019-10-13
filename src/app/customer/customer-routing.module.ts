@@ -19,6 +19,10 @@ const routes: Routes = [
                     loadChildren: './customer-task/customer-task.module#CustomerTaskPageModule'
                 },
                 {
+                    path: 'new',
+                    loadChildren: './customer-task/new-task/new-task.module#NewTaskPageModule'
+                },
+                {
                     path: ':taskId',
                     loadChildren: './customer-task/task-detail/task-detail.module#TaskDetailPageModule'
                 }]
@@ -34,7 +38,9 @@ const routes: Routes = [
         path: '',
         redirectTo: '/customer/tabs/profile',
         pathMatch: 'full'
-    },  { path: 'task-detail', loadChildren: './customer-task/task-detail/task-detail.module#TaskDetailPageModule' }
+    },
+  { path: 'task-detail', loadChildren: './customer-task/task-detail/task-detail.module#TaskDetailPageModule' },
+  { path: 'new-task', loadChildren: './customer-task/new-task/new-task.module#NewTaskPageModule' }
 
 ];
 @NgModule({

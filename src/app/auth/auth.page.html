@@ -1,32 +1,36 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>auth</ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content>
-    <ion-grid>
-        <ion-row>
-          <ion-card>
-           <ion-card-content>
+<ion-grid >
+    <ion-row>
+        <ion-card class="ion-margin">
+            <ion-card-header class="ion-text-center">
+                LOGIN
+            </ion-card-header>
+            <ion-card-content>
                 <ion-list>
-                    <ion-item>
-                      <ion-label floating>Email Address</ion-label>
-                      <ion-input type="email"></ion-input>
+                    <ion-item lines="none">
+                        <ion-label floating>Username</ion-label>
+                        <ion-input type="text"></ion-input>
                     </ion-item>
-                    <ion-item>
-                      <ion-label floating>Password</ion-label>
-                      <ion-input type="password"></ion-input>
+                    <ion-item lines="none">
+                        <ion-label floating>Password</ion-label>
+                        <ion-input type="password"></ion-input>
                     </ion-item>
+                    <ion-item lines="none">
+                        <p>Forgot Password? <a>Click here</a></p>
+                    </ion-item>
+                    <ion-button color="danger" expand="block" fill="outline">Login</ion-button>
                 </ion-list>
-          </ion-card-content>
-          <ion-row>
-               <ion-col>
-                 <ion-button >Register</ion-button>
-                 <ion-button color="primary">Login</ion-button>
-              </ion-col>
-           </ion-row>
+                <b>OR</b>
+                <ion-button color="primary" expand="block">
+                    <ion-icon slot="start" name="logo-facebook"></ion-icon>
+                    Login with facebook
+                </ion-button>
+
+                <ion-button color="danger" expand="block">
+                    <ion-icon slot="start" name="logo-linkedin"></ion-icon>
+                    Login with LinkedIn
+                </ion-button>
+            </ion-card-content>
         </ion-card>
-        </ion-row>
-    </ion-grid>
-</ion-content>
+    </ion-row>
+</ion-grid>
